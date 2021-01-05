@@ -1,1 +1,52 @@
-/* CSS goes here */
+/* Removes margin and padding for everything */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family:'Courier New', Courier, monospace
+}
+
+/* Centers contents of body in the middle of the screen */
+body {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Removes bullet points and centers text */
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Removes underline for <a> */
+a {
+    text-decoration: none;
+}
+
+/* Buttons are layed out as a column */
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button aesthetics */
+.button {
+    border: 0.2rem solid white;
+    padding: 1rem 2rem;
+}
+
+/* Changing the text inside of the button and its children */
+.button:hover, .button:hover > * {
+    background-color: white;
+    color: black;
+}
+
+/* Adding padding to the bottom of the title */
+.title {
+    padding-bottom: 1rem;
+}
