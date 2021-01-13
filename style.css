@@ -32,12 +32,12 @@ a {
 .button-container {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 /* Button aesthetics */
 .button {
-    border: 0.2rem solid white;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.5rem;
 }
 
 /* Changing the text inside of the button and its children */
@@ -46,7 +46,39 @@ a {
     color: black;
 }
 
-/* Adding padding to the bottom of the title */
-.title {
+/* Green text for title */
+.green {
+    color: rgb(36, 216, 36);
+}
+
+/* Blinking cursor CSS */
+.box {
+    display: flex;
+    flex-direction: row;
     padding-bottom: 1rem;
+}
+
+.box h2 {
+    position: relative;
+    top: 3px;
+}
+
+.blink {
+    width: 20px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: white;
+    animation: blink-animation 1.5s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
