@@ -8,7 +8,7 @@
 }
 
 body {
-  font-size: larger;
+  font-size: large;
   display: flex;
   flex: row;
   justify-content: center;
@@ -22,7 +22,6 @@ main {
   justify-content: center;
   max-width: 20.5rem;
   height: 100vh;
-  padding-bottom: 10rem;
 }
 
 .title {
