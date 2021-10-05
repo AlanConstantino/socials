@@ -1,84 +1,86 @@
-/* Removes margin and padding for everything */
 * {
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    color: #ffffff;
-    font-family:'Courier New', Courier, monospace
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 
-/* Centers contents of body in the middle of the screen */
 body {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  font-size: larger;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* Removes bullet points and centers text */
-ul {
-    list-style-type: none;
-    text-align: center;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 20.5rem;
+  height: 100vh;
+  padding-bottom: 10rem;
 }
 
-/* Removes underline for <a> */
-a {
-    text-decoration: none;
+.title {
+  display: inline-flex;
+  text-align: left;
+  padding-bottom: 1rem;
 }
 
-/* Buttons are layed out as a column */
-.button-container {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.links {
+  display: inline-flex;
+  flex-direction: column;
+  list-style-type: none;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-/* Button aesthetics */
-.button {
-    padding: 0.5rem 0.5rem;
+.links p,
+.links a {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
-/* Changing the text inside of the button and its children */
-.button:hover, .button:hover > * {
-    background-color: #ffffff;
-    color: #000000;
+.links li:hover * {
+  background-color: white;
+  color: black;
 }
 
-/* Green text for title */
+.crypto:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .green {
-    color: #24d824;
+  color: #24d824;
 }
 
-/* Blinking cursor CSS */
-.box {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 1rem;
-}
-
-.box h2 {
-    position: relative;
-    top: 3px;
-}
-
+/* blinking cursor animation */
 .blink {
-    width: 20px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: #ffffff;
-    animation: blink-animation 1.5s steps(2, start) infinite;
+  width: 20px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  animation: blink-animation 1.5s steps(2, start) infinite;
 }
 
 @keyframes blink-animation {
-    to {
-        visibility: hidden;
-    }
+  to {
+    visibility: hidden;
+  }
 }
 
 @-webkit-keyframes blink-animation {
-    to {
-        visibility: hidden;
-    }
+  to {
+    visibility: hidden;
+  }
 }
